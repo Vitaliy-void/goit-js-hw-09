@@ -64,6 +64,9 @@ const images = [
   },
 ];
 
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 const listGallery = document.querySelector(".gallery")
 
 const galleryMarkup = 
@@ -84,13 +87,11 @@ const galleryMarkup =
 listGallery.insertAdjacentHTML("afterbegin", galleryMarkup)
 const listItem = document.querySelectorAll(".gallery-item")
 
-// Описаний в документації
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
+    captionPosition: 'bottom',
     captionDelay: 250
 });
 
